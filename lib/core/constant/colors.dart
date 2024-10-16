@@ -1,10 +1,9 @@
-
-
 import 'package:flutter/material.dart';
 
-class AppColors {
-  static Color appMainColor =  const Color(0xffFE8C00);
+class  ThemeColor{
+  static Color MainColor =  const Color(0xffFE8C00);
   static Color buttonColor =  const Color(0xffFE8C00);
   static Color iconColor =  const Color(0xffFE8C00);
-
+  static Color textColor = const Color(0xff000000);
 }
+
