@@ -12,7 +12,7 @@ class Iconses{
   static Icon delete = const Icon(CupertinoIcons.delete);
   static Icon star = const Icon(CupertinoIcons.star_fill);
   static Icon setting = const Icon(CupertinoIcons.settings);
-  static Icon credit_cart = const Icon(CupertinoIcons.creditcard);
+  static Icon creditCard = const Icon(CupertinoIcons.creditcard);
   static Icon information = const Icon(CupertinoIcons.info);
   static Icon phone = const Icon(CupertinoIcons.phone);
   static Icon message = const Icon(Icons.message_outlined);
