@@ -22,6 +22,6 @@ class LoginScreen{
   static const subtitle = 'Please sign in to your account';
   static const email = 'Email Address';
   static const password = 'Password';
-  static const ForgotPassword = 'Forgot Password';
+  static const forgotPassword = 'Forgot Password';
 
 }
