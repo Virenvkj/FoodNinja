@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodninja/Domain/OnboardingModel/onboarding_model.dart';
+import 'package:foodninja/core/constant/extension.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingPage extends StatelessWidget {
@@ -14,14 +15,6 @@ class OnboardingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery
-        .of(context)
-        .size
-        .height;
-    var width = MediaQuery
-        .of(context)
-        .size
-        .width;
     return Stack(children: [
       SizedBox(
         height: double.infinity,
@@ -32,11 +25,11 @@ class OnboardingPage extends StatelessWidget {
         ),
       ),
       Positioned(
-        bottom: height*0.05,
-        left: width * 0.10,
+        bottom: context.height(context)*0.05,
+        left: context.width(context) * 0.10,
         child: Container(
-          height: height * 0.45,
-          width: width * 0.80,
+          height: context.height(context) * 0.45,
+          width: context.width(context) * 0.80,
           decoration: BoxDecoration(
               color: const Color(0xFFFE8C00),
               borderRadius: BorderRadius.circular(48)),
@@ -52,21 +45,21 @@ class OnboardingPage extends StatelessWidget {
                       color: Colors.white),
                 ),
                 SizedBox(
-                  height: height * 0.01,
+                  height: context.height(context) * 0.01,
                 ),
                 Text(
                   onboardingDetailsList[index].description,
                   style: const TextStyle(fontSize: 18, color: Colors.white),
                 ),
                 SizedBox(
-                  height: height * 0.03,
+                  height: context.height(context) * 0.03,
                 ),
                 SmoothPageIndicator(
                     controller: controller, // PageController
                     count: onboardingDetailsList.length,
                     effect: ExpandingDotsEffect(
-                      dotHeight: height * 0.010,
-                      dotWidth: width * 0.020,
+                      dotHeight: context.height(context) * 0.010,
+                      dotWidth: context.width(context) * 0.020,
                       activeDotColor: Colors.white,
                       radius: 40,
                       dotColor: Colors.white60,
@@ -74,16 +67,16 @@ class OnboardingPage extends StatelessWidget {
                     onDotClicked: (index) {}),
                 currentPage == 2
                     ? SizedBox(
-                  height: height * 0.03,
+                  height: context.height(context) * 0.03,
                 )
                     : SizedBox(
-                  height: height * 0.06,
+                  height: context.height(context) * 0.06,
                 ),
                 currentPage == 2
                     ? GestureDetector(
                     onTap: () {},
                     child: CircleAvatar(
-                      radius: height * 0.04,
+                      radius: context.height(context) * 0.04,
                       backgroundColor: Colors.white,
                       child: const Icon(Icons.arrow_forward_rounded),
                     ))
