@@ -16,12 +16,11 @@ class MyApp extends StatelessWidget {
     return ResponsiveBreakpoints.builder(
       child: Builder(
           builder: (context) {
+            final currentBreakpoint = ResponsiveBreakpoints.of(context).breakpoint;
+            final currentPointEnum = BreakpointEnum.breakpointEnum(currentBreakpoint);
             return MaterialApp(
               title: 'Food Ninja',
-              theme: ThemeData(
-                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-                useMaterial3: true,
-              ),
+              theme: BreakpointEnum.responsiveTheme(currentPointEnum),
               home: const OnboardingScreen(),
             );
           }
