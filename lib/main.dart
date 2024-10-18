@@ -29,7 +29,6 @@ class MyApp extends StatelessWidget {
       BreakpointEnum.mobile.point,
       BreakpointEnum.tablet.point,
       BreakpointEnum.desktop.point,
-
     ],
     );
   }
