@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodninja/Presentation/Authentication/login_screen.dart';
 import 'package:foodninja/Presentation/Onboarding_Screen/onboarding_screen.dart';
 
 void main() async {
@@ -11,12 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Food Ninja',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const OnboardingScreen(),
+      home: const LoginScreen(),
     );
   }
 }
