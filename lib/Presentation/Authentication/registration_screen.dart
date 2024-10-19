@@ -73,7 +73,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   RichText(
                     text: const TextSpan(
                       text: 'I Agree with ',
-                      style: TextStyle(color: Colors.black,fontSize: 16),
+                      style: TextStyle(color: Colors.black, fontSize: 16),
                       children: [
                         TextSpan(
                           text: 'Terms of Service ',
@@ -114,27 +114,31 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 )),
               ],
             ),
-            Padding(
-              padding: EdgeInsets.all(context.height(context) * 0.030),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  CommonCircleButton(image: ImagePath.googleImage),
-                  CommonCircleButton(image: ImagePath.facebookImage),
-                  CommonCircleButton(image: ImagePath.appleImage),
-                ],
+            SizedBox(height: context.height(context) * 0.025),
+            SizedBox(height: context.height(context)*0.07,
+              child: Center(
+                child: ListView.builder(
+                  itemCount: loginImages.length,
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) =>
+                      Padding(
+                        padding:  EdgeInsets.all(context.height(context)*0.01),
+                        child: CommonCircleButton(image: loginImages[index]),
+                      ),
+                ),
               ),
             ),
-            SizedBox(height: context.height(context) * 0.030),
+            SizedBox(height: context.height(context) * 0.025),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(RegistrationScreenString.alreadyHaveAccount,
                     style: TextStyle(fontSize: 16)),
                 GestureDetector(
-                  onTap: () {
-                    context.pushAndRemoveUntil(context, target: const LoginScreen());
-                  },
+                  onTap: () =>
+                      context.pushAndRemoveUntil(context,
+                      target: const LoginScreen()),
                   child: Text(LoginScreenString.singIn,
                       style: TextStyle(
                           color: ThemeColor.buttonColor, fontSize: 18)),

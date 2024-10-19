@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:foodninja/core/CommonWidget/button_widget.dart';
 import 'package:foodninja/core/constant/extension.dart';
 
@@ -13,9 +14,15 @@ class CommonCircleButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
-      backgroundColor: Colors.white,
-      radius: context.height(context) * 0.028,
-      backgroundImage: AssetImage(image),
-    );
+        radius: context.height(context) * 0.030,
+        backgroundColor: Colors.white,
+        child: ClipOval(
+          child: SvgPicture.asset(
+            image,
+            width: 80,
+            height: 80,
+            fit: BoxFit.cover,
+          ),
+        ));
   }
 }

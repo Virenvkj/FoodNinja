@@ -33,7 +33,12 @@ class LoginScreenString{
 }
 
 class ImagePath{
-  static const googleImage = 'assets/AuthImages/icons8-google-48.png';
-  static const facebookImage = 'assets/AuthImages/icons8-facebook-48.png';
-  static const appleImage = 'assets/AuthImages/icons8-apple-50.png';
+  static const googleImage = 'assets/AuthImages/google.svg';
+  static const facebookImage = 'assets/AuthImages/facebook.svg';
+  static const appleImage = 'assets/AuthImages/apple.svg';
 }
+ List<String> loginImages = [
+   ImagePath.googleImage,
+   ImagePath.facebookImage,
+   ImagePath.appleImage,
+ ];

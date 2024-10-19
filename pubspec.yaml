@@ -37,7 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_native_splash:
   smooth_page_indicator:
-  gap:
+  flutter_svg:
 
 dev_dependencies:
   flutter_test:

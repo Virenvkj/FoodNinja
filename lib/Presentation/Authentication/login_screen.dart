@@ -18,6 +18,8 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController emailNameController = TextEditingController();
   TextEditingController passWordController = TextEditingController();
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,39 +77,47 @@ class _LoginScreenState extends State<LoginScreen> {
             const ButtonWidget(
               buttonName: LoginScreenString.singIn,
             ),
-            SizedBox(height:context.height(context) * 0.030),
+            SizedBox(height: context.height(context) * 0.030),
             const Row(
               children: [
-               Expanded(child: Divider(thickness: 1,color: Colors.black,)),
-                Text('Or sign in with',
-                  style: TextStyle(fontSize: 18),),
-                Expanded(child: Divider(thickness: 1,color: Colors.black,)),
+                Expanded(
+                    child: Divider(
+                  thickness: 1,
+                  color: Colors.black,
+                )),
+                Text(
+                  'Or sign in with',
+                  style: TextStyle(fontSize: 18),
+                ),
+                Expanded(
+                    child: Divider(
+                  thickness: 1,
+                  color: Colors.black,
+                )),
               ],
             ),
-            Padding(
-              padding: EdgeInsets.all(context.height(context) * 0.030),
-              child: const Row(
-                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  CommonCircleButton(
-                      image: ImagePath.googleImage),
-                  CommonCircleButton(
-                      image: ImagePath.facebookImage),
-                  CommonCircleButton(
-                      image: ImagePath.appleImage),
-                ],
+            SizedBox(height: context.height(context) * 0.025),
+            SizedBox(height: context.height(context) * 0.07,
+              child: ListView.builder(
+                itemCount: loginImages.length,
+                scrollDirection: Axis.horizontal,
+                shrinkWrap: true,
+                itemBuilder: (context, index) =>
+                    Padding(
+                      padding:  EdgeInsets.all(context.height(context)*0.01),
+                      child: CommonCircleButton(image: loginImages[index]),
+                    ),
               ),
             ),
-            SizedBox(height:context.height(context) * 0.030),
+            SizedBox(height: context.height(context) * 0.025),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(LoginScreenString.notHaveAccount,
                     style: TextStyle(fontSize: 16)),
                 GestureDetector(
-                  onTap: () {
-                    context.pushAndRemoveUntil(context, target: const RegistrationScreen());
-                  },
+                  onTap: () => context.pushAndRemoveUntil(context,
+                      target: const RegistrationScreen()),
                   child: Text(RegistrationScreenString.singUp,
                       style: TextStyle(
                           color: ThemeColor.buttonColor, fontSize: 18)),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodninja/Domain/OnboardingModel/onboarding_model.dart';
+import 'package:foodninja/Presentation/Authentication/login_screen.dart';
 import 'package:foodninja/core/constant/extension.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -75,7 +76,8 @@ class OnboardingPage extends StatelessWidget {
                   ),
                   currentPage == 2
                       ? GestureDetector(
-                          onTap: () {},
+                          onTap: () => context.pushAndRemoveUntil(context,
+                              target: const LoginScreen()),
                           child: CircleAvatar(
                             radius: context.height(context) * 0.04,
                             backgroundColor: Colors.white,
@@ -84,12 +86,15 @@ class OnboardingPage extends StatelessWidget {
                       : Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text(
-                              'Skip',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 18),
+                            TextButton(
+                              child: const Text('Skip',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 18)),
+                              onPressed: () => context.pushAndRemoveUntil(
+                                  context,
+                                  target: const LoginScreen()),
                             ),
                             TextButton(
                               onPressed: () {
