@@ -1,110 +1,135 @@
 import 'package:flutter/material.dart';
+
+// Regular - 400
+// Medium - 500
+// Semi bold - 600
+// Bold - 700
+
 class AppTextTheme {
-
-  static final headline1 = [
-    _headline1TextStyle.copyWith(fontSize: 40,), // Mobile
-    _headline1TextStyle.copyWith(fontSize: 42, ), // Tablet
-    _headline1TextStyle.copyWith(fontSize: 44,), // Desktop
-  ];
-
-  static final headline2 = [
-    _headline2TextStyle.copyWith(fontSize: 32,), // Mobile
-    _headline2TextStyle.copyWith(fontSize: 34,), // Tablet
-    _headline2TextStyle.copyWith(fontSize: 36,), // Desktop
-  ];
+  static const _interFontFamily = 'Inter';
 
   static final headline3 = [
-    _headline3TextStyle.copyWith(fontSize: 24,), // Mobile
-    _headline3TextStyle.copyWith(fontSize: 26,), // Tablet
-    _headline3TextStyle.copyWith(fontSize: 28,), // Desktop
+    _headlineBaseTextStyle.copyWith(
+        height: 32 / 40, fontSize: 32, fontWeight: FontWeight.bold), // Mobile
+    _headlineBaseTextStyle.copyWith(
+        height: 34 / 42, fontSize: 34, fontWeight: FontWeight.bold), // Tablet
+    _headlineBaseTextStyle.copyWith(
+        height: 36 / 44, fontSize: 36, fontWeight: FontWeight.bold), // Desktop
   ];
 
   static final headline4 = [
-    _headline4TextStyle.copyWith(fontSize: 18,), // Mobile
-    _headline4TextStyle.copyWith(fontSize: 20,), // Tablet
-    _headline4TextStyle.copyWith(fontSize: 22,), // Desktop
+    _headlineBaseTextStyle.copyWith(height: 32 / 40, fontSize: 32), // Mobile
+    _headlineBaseTextStyle.copyWith(height: 34 / 42, fontSize: 34), // Tablet
+    _headlineBaseTextStyle.copyWith(height: 36 / 44, fontSize: 36), // Desktop
+  ];
+
+  static final headline5 = [
+    _headlineBaseTextStyle.copyWith(height: 24 / 32, fontSize: 24), // Mobile
+    _headlineBaseTextStyle.copyWith(height: 26 / 34, fontSize: 26), // Tablet
+    _headlineBaseTextStyle.copyWith(height: 28 / 36, fontSize: 28), // Desktop
   ];
 
   static final bodyLarge = [
-    _bodyLargeTextStyle.copyWith(fontSize: 16,), // Mobile
-    _bodyLargeTextStyle.copyWith(fontSize: 20,), // Tablet
-    _bodyLargeTextStyle.copyWith(fontSize: 22,), // Desktop
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 16, fontWeight: FontWeight.w400), // Mobile
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 18, fontWeight: FontWeight.w400), // Tablet
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 20, fontWeight: FontWeight.w400), // Desktop
   ];
 
   static final bodyMedium = [
-    _bodyMediumTextStyle.copyWith(fontSize: 14,), // Mobile
-    _bodyMediumTextStyle.copyWith(fontSize: 18,), // Tablet
-    _bodyMediumTextStyle.copyWith(fontSize: 20,), // Desktop
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 14, fontWeight: FontWeight.w400), // Mobile
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 16, fontWeight: FontWeight.w400), // Tablet
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 18, fontWeight: FontWeight.w400), // Desktop
   ];
 
   static final bodySmall = [
-    _bodySmallTextStyle.copyWith(fontSize: 12,), // Mobile
-    _bodySmallTextStyle.copyWith(fontSize: 16,), // Tablet
-    _bodySmallTextStyle.copyWith(fontSize: 18,), // Desktop
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 12, fontWeight: FontWeight.w400), // Mobile
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 14, fontWeight: FontWeight.w400), // Tablet
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 16, fontWeight: FontWeight.w400), // Desktop
   ];
 
+  static final titleLarge = [
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 16, fontWeight: FontWeight.w600), // Mobile
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 18, fontWeight: FontWeight.w600), // Tablet
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 20, fontWeight: FontWeight.w600), // Desktop
+  ];
 
-  static const _headline1TextStyle = TextStyle(
-    fontWeight: FontWeight.w500,
+  static final titleMedium = [
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 14, fontWeight: FontWeight.w600), // Mobile
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 16, fontWeight: FontWeight.w600), // Tablet
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 18, fontWeight: FontWeight.w600), // Desktop
+  ];
+
+  static final titleSmall = [
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 12, fontWeight: FontWeight.w600), // Mobile
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 14, fontWeight: FontWeight.w600), // Tablet
+    _bodyBaseTextStyle.copyWith(
+        fontSize: 16, fontWeight: FontWeight.w600), // Desktop
+  ];
+
+  static const _headlineBaseTextStyle = TextStyle(
+    fontWeight: FontWeight.w600,
     letterSpacing: 0,
+    fontFamily: _interFontFamily,
   );
-  static const _headline2TextStyle = TextStyle(
-    fontWeight: FontWeight.bold,
-    letterSpacing: 1,
-  );
-  static const _headline3TextStyle = TextStyle(
-    fontWeight: FontWeight.bold,
-    letterSpacing: 2,
-  );
-  static const _headline4TextStyle = TextStyle(
-    fontWeight: FontWeight.w400,
-    letterSpacing: 0,
-  );
-  static const _bodyMediumTextStyle = TextStyle(
-    fontWeight: FontWeight.normal,
-    letterSpacing: 0,
-  );
-  static const _bodySmallTextStyle = TextStyle(
-    fontWeight: FontWeight.normal,
-    letterSpacing: 0,
-  );
-  static const _bodyLargeTextStyle = TextStyle(
-    fontWeight: FontWeight.normal,
+
+  static const _bodyBaseTextStyle = TextStyle(
+    fontFamily: _interFontFamily,
     letterSpacing: 0,
   );
 
   // Mobile text theme
   static final mobileTextTheme = TextTheme(
-    headlineLarge: headline1[0],
-    headlineMedium: headline2[0],
-    headlineSmall: headline3[0],
-    displaySmall: headline4[0],
+    headlineLarge: headline3[0],
+    headlineMedium: headline4[0],
+    headlineSmall: headline5[0],
     bodyLarge: bodyLarge[0],
-    bodyMedium: bodyLarge[0],
+    bodyMedium: bodyMedium[0],
     bodySmall: bodySmall[0],
+    titleMedium: titleMedium[0],
+    titleLarge: titleLarge[0],
+    titleSmall: titleSmall[0],
   );
 
   // Tablet text theme
   static final tabletTextTheme = TextTheme(
-    headlineLarge: headline1[1],
-    headlineMedium: headline2[1],
-    headlineSmall: headline3[1],
-    displaySmall: headline4[1],
+    headlineLarge: headline3[1],
+    headlineMedium: headline4[1],
+    headlineSmall: headline5[1],
     bodyLarge: bodyLarge[1],
-    bodyMedium: bodyLarge[1],
+    bodyMedium: bodyMedium[1],
     bodySmall: bodySmall[1],
+    titleMedium: titleMedium[1],
+    titleLarge: titleLarge[1],
+    titleSmall: titleSmall[1],
   );
 
   // Desktop text theme
   static final desktopTextTheme = TextTheme(
-    headlineLarge: headline1[2],
-    headlineMedium: headline2[2],
-    headlineSmall: headline3[2],
-    displaySmall: headline4[2],
+    headlineLarge: headline3[2],
+    headlineMedium: headline4[2],
+    headlineSmall: headline5[2],
     bodyLarge: bodyLarge[2],
-    bodyMedium: bodyLarge[2],
+    bodyMedium: bodyMedium[2],
     bodySmall: bodySmall[2],
+    titleMedium: titleMedium[2],
+    titleLarge: titleLarge[2],
+    titleSmall: titleSmall[2],
   );
 }
-
-

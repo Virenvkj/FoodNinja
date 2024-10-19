@@ -2,22 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:foodninja/core/Theme_data/app_theme.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-enum BreakpointEnum{
-  mobile,tablet,desktop;
+enum BreakpointEnum {
+  mobile,
+  tablet,
+  desktop;
 
-  Breakpoint get point{
-    switch(this){
+  Breakpoint get point {
+    switch (this) {
       case BreakpointEnum.mobile:
-        return const Breakpoint(start: 0, end: 450,name: MOBILE);
+        return const Breakpoint(start: 0, end: 450, name: MOBILE);
       case BreakpointEnum.tablet:
-        return const Breakpoint(start: 451, end: 600,name: TABLET);
+        return const Breakpoint(start: 451, end: 600, name: TABLET);
       case BreakpointEnum.desktop:
-        return const Breakpoint(start: 451, end: 600,name: TABLET);
+        return const Breakpoint(
+            start: 601, end: double.infinity, name: DESKTOP);
+      default:
+        return const Breakpoint(start: 0, end: 450, name: MOBILE);
     }
   }
 
-  static BreakpointEnum breakpointEnum(Breakpoint currentBreakpoint){
-    switch (currentBreakpoint){
+  static BreakpointEnum breakpointEnum(Breakpoint currentBreakpoint) {
+    switch (currentBreakpoint) {
       case const Breakpoint(start: 0, end: 450, name: MOBILE):
         return BreakpointEnum.mobile;
 
@@ -32,16 +37,14 @@ enum BreakpointEnum{
     }
   }
 
-  static ThemeData responsiveTheme(BreakpointEnum currentBreakPoint){
-    switch (currentBreakPoint){
+  static ThemeData responsiveTheme(BreakpointEnum currentBreakPoint) {
+    switch (currentBreakPoint) {
       case BreakpointEnum.mobile:
         return AppTheme.mobileThemeData;
       case BreakpointEnum.tablet:
         return AppTheme.tabletThemeData;
       case BreakpointEnum.desktop:
         return AppTheme.desktopThemeData;
-
     }
   }
 }
-
