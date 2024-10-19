@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 class AppTextTheme {
 
   static final headline1 = [
-    _headline1TextStyle.copyWith(fontSize: 40, height: 32 / 24), // Mobile
-    _headline1TextStyle.copyWith(fontSize: 42, height: 44 / 36), // Tablet
-    _headline1TextStyle.copyWith(fontSize: 44, height: 64 / 44), // Desktop
+    _headline1TextStyle.copyWith(fontSize: 40,), // Mobile
+    _headline1TextStyle.copyWith(fontSize: 42, ), // Tablet
+    _headline1TextStyle.copyWith(fontSize: 44,), // Desktop
   ];
 
   static final headline2 = [

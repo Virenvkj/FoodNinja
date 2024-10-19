@@ -11,13 +11,13 @@ class AppTheme{
 
   static ThemeData tabletThemeData = ThemeData(
       textTheme: AppTextTheme.tabletTextTheme,
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.pinkAccent),
+      colorScheme: ColorScheme.fromSeed(seedColor:ThemeColor.mainColor),
       useMaterial3: true
   );
 
   static ThemeData desktopThemeData = ThemeData(
       textTheme: AppTextTheme.desktopTextTheme,
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.pinkAccent),
+      colorScheme: ColorScheme.fromSeed(seedColor:ThemeColor.mainColor),
       useMaterial3: true
   );
 }
