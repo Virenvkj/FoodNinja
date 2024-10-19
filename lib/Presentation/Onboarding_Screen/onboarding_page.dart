@@ -42,21 +42,14 @@ class OnboardingPage extends StatelessWidget {
                 children: [
                   Text(
                     onboardingDetailsList[index].title,
-                    style: const TextStyle(
-                      fontSize: 38,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
+                    style:Theme.of(context).textTheme.headlineMedium,
                   ),
                   SizedBox(
                     height: context.height(context) * 0.01,
                   ),
                   Text(
                     onboardingDetailsList[index].description,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                    ),
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   SizedBox(
                     height: context.height(context) * 0.03,
