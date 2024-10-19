@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:foodninja/Presentation/Onboarding_Screen/onboarding_screen.dart';
 
+import 'Presentation/tabs_screen/tabs.dart';
+
 void main() async {
   runApp(const MyApp());
 }
@@ -16,7 +18,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const OnboardingScreen(),
+      // home: const OnboardingScreen(),
+      home: const Tabs(),
+
     );
   }
 }

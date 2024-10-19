@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:foodninja/Domain/OnboardingModel/onboarding_model.dart';
 import 'package:foodninja/core/constant/extension.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import '../tabs_screen/tabs.dart';
+
 
 class OnboardingPage extends StatelessWidget {
   final int index;
@@ -75,7 +77,10 @@ class OnboardingPage extends StatelessWidget {
                   ),
                   currentPage == 2
                       ? GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const Tabs()));
+                          },
                           child: CircleAvatar(
                             radius: context.height(context) * 0.04,
                             backgroundColor: Colors.white,
