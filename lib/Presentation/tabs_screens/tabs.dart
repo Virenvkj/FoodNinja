@@ -14,11 +14,11 @@ class Tabs extends StatefulWidget {
 class _TabsState extends State<Tabs> {
 
    int _currentIndex = 0;
-  static const List<Widget> _pages = [
-    HomeScreen(),
-    CartScreen(),
-    ChatScreen(),
-    ProfileScreen()
+  static final List<Widget> _pages = [
+    const HomeScreen(),
+    const CartScreen(),
+    const ChatScreen(),
+    const ProfileScreen()
   ];
 
   @override

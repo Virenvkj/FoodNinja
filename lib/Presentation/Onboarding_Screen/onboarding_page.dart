@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodninja/Domain/OnboardingModel/onboarding_model.dart';
 import 'package:foodninja/core/constant/extension.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../tabs_screen/tabs.dart';
+import '../tabs_screens/tabs.dart';
 
 
 class OnboardingPage extends StatelessWidget {
