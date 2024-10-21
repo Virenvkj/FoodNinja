@@ -1,27 +1,26 @@
-class IntroScreen{
-  static const title = 'We serve incomparable delicacies';
-  static const subtitle = 'All the best restaurants with their top menu waiting for you, they cant’t wait for your order!!';
-}
+class Strings{
 
-class RegistrationScreen{
-  static const title = 'Create your new account.';
-  static const subtitle = 'Create an account to start looking for the food you like';
-  static const email = 'Email Address';
-  static const password = 'Password';
-  static const userName = 'User Name';
-}
+  //IntroScreen
+  static const introScreenTitle = 'We serve incomparable delicacies';
+  static const introScreenSubTitle = 'All the best restaurants with their top menu waiting for you, they cant’t wait for your order!!';
 
-class ForgotPasswordScreen{
-  static const title = 'Forgot password?';
-  static const subtitle = 'Enter your email address and we’ll send you confirmation code to reset your password';
-  static const email = 'Email Address';
-}
+  //registrationScreen
+  static const registrationScreenTitle = 'Create your new account.';
+  static const registrationScreenSubTitle = 'Create an account to start looking for the food you like';
+  static const registrationScreenEmail = 'Email Address';
+  static const registrationScreenPassword = 'Password';
+  static const registrationScreenUserName = 'User Name';
 
-class LoginScreen{
-  static const title = 'Login to your account.';
-  static const subtitle = 'Please sign in to your account';
-  static const email = 'Email Address';
-  static const password = 'Password';
-  static const forgotPassword = 'Forgot Password';
+  //forgotPasswordScreen
+  static const forgotPasswordScreenTitle = 'Forgot password?';
+  static const forgotPasswordScreenSubTitle = 'Enter your Email address and we’ll send you confirmation code to reset your password';
+  static const forgotPasswordScreenEmail = 'Email Address';
+
+  //loginScreen
+  static const loginScreenTitle = 'Login to your account.';
+  static const loginScreenSubTitle = 'Please sign in to your account';
+  static const loginScreenEmail = 'Email Address';
+  static const loginScreenPassword = 'Password';
+  static const loginScreenForgotPassword = 'Forgot Password';
 
 }
