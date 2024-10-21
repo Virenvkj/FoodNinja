@@ -55,7 +55,7 @@ class NotificationScreen extends StatelessWidget {
           NotificationTile(
             icon: Icons.email,
             iconBgColor: Colors.grey.shade300,
-            title: '35% Special Discount!',
+            title: '32% Special Discount!',
             subtitle: 'Special promotion only valid today',
             iconColor: Colors.blue,
           ),
@@ -69,7 +69,7 @@ class NotificationScreen extends StatelessWidget {
           NotificationTile(
             icon: Icons.local_offer,
             iconBgColor: Colors.grey.shade300,
-            title: 'Special Offer! 60% Off',
+            title: 'Special Offer! 40% Off',
             subtitle: 'Special offer for new account, valid until 20 Nov 2022',
             iconColor: Colors.red,
           ),
