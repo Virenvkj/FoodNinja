@@ -1,44 +1,32 @@
- class IntroScreenString{
-  static const title1 = '   We server \nincomparable \n   delicacies';
-  static const title2 = '   Find the \n     Best \nRestaurants';
-  static const title3 = ' They can\'t \n   wait for \nyour order!!';
-  static const subtitle = 'All the best restaurants with their top menu waiting for you, they cant’t wait for your order!!';
-}
+class AppStrings{
 
-class RegistrationScreenString{
-  static const title = 'Create your new account.';
-  static const subtitle = 'Create an account to start looking for the food you like';
-  static const email = 'Email Address';
-  static const password = 'Password';
-  static const userName = 'User Name';
-  static const singUp = 'Sign Up';
-  static const alreadyHaveAccount = 'Already have an account !! ';
-}
+  //IntroScreen
+  static const introScreenTitle1 = 'We serve incomparable delicacies';
+  static const introScreenTitle2 = 'Find the best restaurants';
+  static const introScreenTitle3 = 'They can\'t wait for your order';
+  static const introScreenSubTitle = 'All the best restaurants with their top menu waiting for you, they cant’t wait for your order!!';
 
-class ForgotPasswordScreenString{
-  static const title = 'Forgot password?';
-  static const subtitle = 'Enter your email address and we’ll send you confirmation code to reset your password';
-  static const email = 'Email Address';
-}
+  //registrationScreen
+  static const registrationScreenTitle = 'Create your new account.';
+  static const registrationScreenSubTitle = 'Create an account to start looking for the food you like';
+  static const registrationScreenEmail = 'Email Address';
+  static const registrationScreenPassword = 'Password';
+  static const registrationScreenUserName = 'User Name';
 
-class LoginScreenString{
-  static const title = 'Login to your \naccount.';
-  static const subtitle = 'Please sign in to your account';
-  static const email = 'Email Address';
-  static const password = 'Password';
-  static const forgotPassword = 'Forgot Password?';
-  static const singIn = 'Sign In';
-  static const notHaveAccount = 'Don\'t have an account?';
+
+  //forgotPasswordScreen
+  static const forgotPasswordScreenTitle = 'Forgot password?';
+  static const forgotPasswordScreenSubTitle = 'Enter your Email address and we’ll send you confirmation code to reset your password';
+  static const forgotPasswordScreenEmail = 'Email Address';
+
+  //loginScreen
+  static const loginScreenTitle = 'Login to your account.';
+  static const loginScreenSubTitle = 'Please sign in to your account';
+  static const loginScreenEmail = 'Email Address';
+  static const loginScreenPassword = 'Password';
+  static const loginScreenForgotPassword = 'Forgot Password';
+
+  static const signIn = 'Sign In';
+  static const register = 'Register';
 
 }
-
-class ImagePath{
-  static const googleImage = 'assets/AuthImages/google.svg';
-  static const facebookImage = 'assets/AuthImages/facebook.svg';
-  static const appleImage = 'assets/AuthImages/apple.svg';
-}
- List<String> loginImages = [
-   ImagePath.googleImage,
-   ImagePath.facebookImage,
-   ImagePath.appleImage,
- ];
