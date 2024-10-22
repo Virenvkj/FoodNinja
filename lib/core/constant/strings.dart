@@ -1,27 +1,44 @@
-class IntroScreen{
-  static const title = 'We serve incomparable delicacies';
+ class IntroScreenString{
+  static const title1 = '   We server \nincomparable \n   delicacies';
+  static const title2 = '   Find the \n     Best \nRestaurants';
+  static const title3 = ' They can\'t \n   wait for \nyour order!!';
   static const subtitle = 'All the best restaurants with their top menu waiting for you, they cant’t wait for your order!!';
 }
 
-class RegistrationScreen{
+class RegistrationScreenString{
   static const title = 'Create your new account.';
   static const subtitle = 'Create an account to start looking for the food you like';
   static const email = 'Email Address';
   static const password = 'Password';
   static const userName = 'User Name';
+  static const singUp = 'Sign Up';
+  static const alreadyHaveAccount = 'Already have an account !! ';
 }
 
-class ForgotPasswordScreen{
+class ForgotPasswordScreenString{
   static const title = 'Forgot password?';
   static const subtitle = 'Enter your email address and we’ll send you confirmation code to reset your password';
   static const email = 'Email Address';
 }
 
-class LoginScreen{
-  static const title = 'Login to your account.';
+class LoginScreenString{
+  static const title = 'Login to your \naccount.';
   static const subtitle = 'Please sign in to your account';
   static const email = 'Email Address';
   static const password = 'Password';
-  static const forgotPassword = 'Forgot Password';
+  static const forgotPassword = 'Forgot Password?';
+  static const singIn = 'Sign In';
+  static const notHaveAccount = 'Don\'t have an account?';
 
 }
+
+class ImagePath{
+  static const googleImage = 'assets/AuthImages/google.svg';
+  static const facebookImage = 'assets/AuthImages/facebook.svg';
+  static const appleImage = 'assets/AuthImages/apple.svg';
+}
+ List<String> loginImages = [
+   ImagePath.googleImage,
+   ImagePath.facebookImage,
+   ImagePath.appleImage,
+ ];

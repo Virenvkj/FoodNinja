@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:foodninja/Presentation/Onboarding_Screen/onboarding_screen.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'Presentation/Onboarding_Screen/onboarding_screen.dart';
 import 'core/Theme_data/breakpoint_enum.dart';
 
 void main() {
