@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:foodninja/Presentation/tabs_screens/screens/cart_screen/cart_item.dart';
+import 'package:foodninja/Presentation/tabs_screens/screens/cart_screen/cart_summary_row.dart';
 import 'payment_screen/payment_screen.dart';
-import 'cart_widgets.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -51,7 +52,8 @@ class _CartScreenState extends State<CartScreen> {
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Delivery Location', style: TextStyle(color: Colors.grey)),
+                  Text('Delivery Location',
+                      style: TextStyle(color: Colors.grey)),
                   Text('Home', style: TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
@@ -85,32 +87,47 @@ class _CartScreenState extends State<CartScreen> {
           const SizedBox(height: 20),
 
           // Cart Items Section
-          ...cartItems.map((item) => CartWidgets.buildCartItem(
-              item['title']!, item['price']!, item['imageUrl']!)),
+          ...cartItems.map((item) => CartItem(
+                title: item['title'] ?? '',
+                price: item['price'] ?? '',
+                imageUrl: item['imageUrl'] ?? '',
+              )),
 
           const SizedBox(height: 20),
 
           // Payment Summary Section
-          Card(
-            margin: const EdgeInsets.symmetric(vertical: 10),
+          const Card(
+            margin: EdgeInsets.symmetric(vertical: 10),
             child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('Payment Summary',
+                  Text('Payment Summary',
                       style: TextStyle(fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 10),
-                  CartWidgets.buildSummaryRow('Total Items (3)', '\$48,900'),
-                  CartWidgets.buildSummaryRow('Delivery Fee', 'Free'),
-                 CartWidgets.buildSummaryRow('Discount', '-\$10,900', isDiscount: true),
-                  const Divider(),
-                  CartWidgets.buildSummaryRow('Total', '\$38,000', isTotal: true),
+                  SizedBox(height: 10),
+                  CartSummaryRow(
+                    label: 'Total Items (3)',
+                    value: '\$48,900',
+                  ),
+                  CartSummaryRow(
+                    label: 'Delivery Fee',
+                    value: 'Free',
+                  ),
+                  CartSummaryRow(
+                    label: 'Discount',
+                    value: '-\$10,900',
+                    isDiscount: true,
+                  ),
+                  Divider(),
+                  CartSummaryRow(
+                    label: 'Total',
+                    value: '\$38,000',
+                  ),
                 ],
               ),
             ),
           ),
-
           const SizedBox(height: 20),
 
           // Order Now Button
@@ -129,7 +146,8 @@ class _CartScreenState extends State<CartScreen> {
             ),
             child: const Text(
               'Order Now',
-              style: TextStyle(fontSize: 18, color: Colors.white), // Text color white
+              style: TextStyle(
+                  fontSize: 18, color: Colors.white), // Text color white
             ),
           ),
         ],
