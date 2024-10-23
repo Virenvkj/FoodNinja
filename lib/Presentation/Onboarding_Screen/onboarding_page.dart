@@ -3,6 +3,7 @@ import 'package:foodninja/Domain/OnboardingModel/onboarding_model.dart';
 import 'package:foodninja/Presentation/Authentication/login_screen.dart';
 import 'package:foodninja/core/constant/extension.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import '../tabs_screens/tabs.dart';
 
 class OnboardingPage extends StatelessWidget {
   final int index;
@@ -43,7 +44,7 @@ class OnboardingPage extends StatelessWidget {
                 children: [
                   Text(
                     onboardingDetailsList[index].title,
-                    style:Theme.of(context).textTheme.headlineMedium,
+                    style: Theme.of(context).textTheme.headlineMedium,
                   ),
                   SizedBox(
                     height: context.height(context) * 0.01,
@@ -69,8 +70,10 @@ class OnboardingPage extends StatelessWidget {
                   ),
                   currentPage == 2
                       ? GestureDetector(
-                          onTap: () => context.pushAndRemoveUntil(context,
-                              target: const LoginScreen()),
+                          onTap: () => context.push(
+                                context,
+                                target: const Tabs(),
+                              ),
                           child: CircleAvatar(
                             radius: context.height(context) * 0.04,
                             backgroundColor: Colors.white,
