@@ -1,4 +1,4 @@
-class Strings{
+class AppStrings{
 
   //IntroScreen
   static const introScreenTitle = 'We serve incomparable delicacies';
