@@ -12,21 +12,21 @@ class OnboardingModel {
 List<OnboardingModel> onboardingDetailsList=[
   OnboardingModel(
     image: 'assets/OnboardingImage/onboardingImage1.png',
-    title: IntroScreenString.title1,
+    title: AppStrings.introScreenTitle1,
     description:
     'All the best restaurants with their top menu waiting for you, they cant’t wait for your order!!',
 
   ),
   OnboardingModel(
     image: 'assets/OnboardingImage/onboardingImage2.png',
-    title:IntroScreenString.title2,
+    title:AppStrings.introScreenTitle2,
     description:
     'All the best restaurants with their top menu waiting for you, they cant’t wait for your order!!',
 
   ),
   OnboardingModel(
     image: 'assets/OnboardingImage/onboardingImage3.png',
-    title: IntroScreenString.title3,
+    title: AppStrings.introScreenTitle3,
     description:
     'All the best restaurants with their top menu waiting for you, they cant’t wait for your order!!',
   ),

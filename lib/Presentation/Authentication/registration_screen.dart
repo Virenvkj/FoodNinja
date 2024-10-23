@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodninja/Presentation/Authentication/common/common_circle_button.dart';
+import 'package:foodninja/Presentation/Authentication/common/common_list_view_bulider_widget.dart';
 import 'package:foodninja/Presentation/Authentication/login_screen.dart';
 import 'package:foodninja/core/CommonWidget/button_widget.dart';
 import 'package:foodninja/core/CommonWidget/textformfield_widget.dart';
@@ -32,16 +32,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: context.height(context) * 0.090,
             ),
             const Text(
-              RegistrationScreenString.title,
+              AppStrings.registrationScreenTitle,
               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 36),
             ),
             const Text(
-              RegistrationScreenString.subtitle,
+              AppStrings.registrationScreenSubTitle,
               style: TextStyle(fontSize: 16, color: Colors.black54),
             ),
             SizedBox(height: context.height(context) * 0.040),
             const Text(
-              RegistrationScreenString.email,
+              AppStrings.registrationScreenEmail,
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
             ),
             TextformfieldWidget(
@@ -49,14 +49,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               hint: 'darshan12@gmail.com',
             ),
             SizedBox(height: context.height(context) * 0.020),
-            const Text(RegistrationScreenString.userName,
+            const Text(AppStrings.registrationScreenUserName,
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
             TextformfieldWidget(
               controller: userNameController,
               hint: '********',
             ),
             SizedBox(height: context.height(context) * 0.020),
-            const Text(RegistrationScreenString.password,
+            const Text(AppStrings.registrationScreenPassword,
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
             TextformfieldWidget(
               controller: passWordController,
@@ -93,7 +93,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
             ),
             const ButtonWidget(
-              buttonName: RegistrationScreenString.singUp,
+              buttonName: AppStrings.register,
             ),
             SizedBox(height: context.height(context) * 0.030),
             const Row(
@@ -115,31 +115,18 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ],
             ),
             SizedBox(height: context.height(context) * 0.025),
-            SizedBox(height: context.height(context)*0.07,
-              child: Center(
-                child: ListView.builder(
-                  itemCount: loginImages.length,
-                  scrollDirection: Axis.horizontal,
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) =>
-                      Padding(
-                        padding:  EdgeInsets.all(context.height(context)*0.01),
-                        child: CommonCircleButton(image: loginImages[index]),
-                      ),
-                ),
-              ),
-            ),
+            const CommonListViewBuliderWidget(),
             SizedBox(height: context.height(context) * 0.025),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(RegistrationScreenString.alreadyHaveAccount,
+                const Text(AppStrings.haveAnAccount,
                     style: TextStyle(fontSize: 16)),
                 GestureDetector(
                   onTap: () =>
                       context.pushAndRemoveUntil(context,
                       target: const LoginScreen()),
-                  child: Text(LoginScreenString.singIn,
+                  child: Text(AppStrings.signIn,
                       style: TextStyle(
                           color: ThemeColor.buttonColor, fontSize: 18)),
                 ),
