@@ -28,5 +28,14 @@ class AppStrings{
 
   static const signIn = 'Sign In';
   static const register = 'Register';
+  static const haveAnAccount = 'Already have an account !! ';
+  static const dontHaveAnAccount = 'Don\'t have an account ? ';
+
+
+  // images path
+
+  static const googleIcon = 'assets/AuthImages/google.svg';
+  static const facebookIcon = 'assets/AuthImages/facebook.svg';
+  static const appleIcon = 'assets/AuthImages/apple.svg';
 
 }

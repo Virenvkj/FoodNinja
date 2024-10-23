@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodninja/Presentation/Authentication/common/common_circle_button.dart';
+import 'package:foodninja/Presentation/Authentication/common/common_list_view_bulider_widget.dart';
 import 'package:foodninja/Presentation/Authentication/registration_screen.dart';
 import 'package:foodninja/core/CommonWidget/textformfield_widget.dart';
 import 'package:foodninja/core/constant/extension.dart';
@@ -32,17 +33,17 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               height: context.height(context) * 0.090,
             ),
-            const Text(
-              LoginScreenString.title,
+             const Text(
+              AppStrings.loginScreenTitle,
               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 36),
             ),
             const Text(
-              LoginScreenString.subtitle,
+              AppStrings.loginScreenSubTitle,
               style: TextStyle(fontSize: 16, color: Colors.black54),
             ),
             SizedBox(height: context.height(context) * 0.040),
             const Text(
-              LoginScreenString.email,
+              AppStrings.loginScreenEmail,
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
             ),
             TextformfieldWidget(
@@ -50,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
               hint: 'darshan12@gmail.com',
             ),
             SizedBox(height: context.height(context) * 0.020),
-            const Text(LoginScreenString.password,
+            const Text(AppStrings.loginScreenPassword,
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
             TextformfieldWidget(
               controller: passWordController,
@@ -65,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: GestureDetector(
                   onTap: () {},
                   child: Text(
-                    LoginScreenString.forgotPassword,
+                  AppStrings.loginScreenForgotPassword,
                     style: TextStyle(
                         color: ThemeColor.buttonColor,
                         fontSize: 16,
@@ -75,7 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const ButtonWidget(
-              buttonName: LoginScreenString.singIn,
+              buttonName: AppStrings.signIn,
             ),
             SizedBox(height: context.height(context) * 0.030),
             const Row(
@@ -97,28 +98,17 @@ class _LoginScreenState extends State<LoginScreen> {
               ],
             ),
             SizedBox(height: context.height(context) * 0.025),
-            SizedBox(height: context.height(context) * 0.07,
-              child: ListView.builder(
-                itemCount: loginImages.length,
-                scrollDirection: Axis.horizontal,
-                shrinkWrap: true,
-                itemBuilder: (context, index) =>
-                    Padding(
-                      padding:  EdgeInsets.all(context.height(context)*0.01),
-                      child: CommonCircleButton(image: loginImages[index]),
-                    ),
-              ),
-            ),
+            const CommonListViewBuliderWidget(),
             SizedBox(height: context.height(context) * 0.025),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(LoginScreenString.notHaveAccount,
+                const Text(AppStrings.dontHaveAnAccount,
                     style: TextStyle(fontSize: 16)),
                 GestureDetector(
                   onTap: () => context.pushAndRemoveUntil(context,
                       target: const RegistrationScreen()),
-                  child: Text(RegistrationScreenString.singUp,
+                  child: Text(AppStrings.register,
                       style: TextStyle(
                           color: ThemeColor.buttonColor, fontSize: 18)),
                 ),
