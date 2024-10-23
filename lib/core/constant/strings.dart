@@ -1,7 +1,9 @@
 class AppStrings{
 
   //IntroScreen
-  static const introScreenTitle = 'We serve incomparable delicacies';
+  static const introScreenTitle1 = 'We serve incomparable delicacies';
+  static const introScreenTitle2 = 'Find the best restaurants';
+  static const introScreenTitle3 = 'They can\'t wait for your order';
   static const introScreenSubTitle = 'All the best restaurants with their top menu waiting for you, they cant’t wait for your order!!';
 
   //registrationScreen
@@ -10,6 +12,7 @@ class AppStrings{
   static const registrationScreenEmail = 'Email Address';
   static const registrationScreenPassword = 'Password';
   static const registrationScreenUserName = 'User Name';
+
 
   //forgotPasswordScreen
   static const forgotPasswordScreenTitle = 'Forgot password?';
@@ -22,5 +25,8 @@ class AppStrings{
   static const loginScreenEmail = 'Email Address';
   static const loginScreenPassword = 'Password';
   static const loginScreenForgotPassword = 'Forgot Password';
+
+  static const signIn = 'Sign In';
+  static const register = 'Register';
 
 }
