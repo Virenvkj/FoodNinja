@@ -55,7 +55,7 @@ class AppStrings{
   static const paymentScreenDriver =  "Driver";
   static const paymentScreenTax =  "Tax";
   static const paymentScreenTotalPrice =  "Total Price";
-  static const paymentScreenTotalDeliverTo =  "Deliver to :";
+  static const paymentScreenTotalDeliverTo =  "Deliver to";
   static const paymentScreenTotalName =  "Name";
   static const paymentScreenTotalAddress =  "Address";
   static const paymentScreenTotalHouseNo =  "House No.";

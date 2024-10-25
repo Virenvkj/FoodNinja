@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodninja/Presentation/tabs_screens/screens/cart_screen/cart_item.dart';
 import 'package:foodninja/Presentation/tabs_screens/screens/cart_screen/cart_summary_row.dart';
+import 'payment_screen/payment_screen.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -132,9 +133,9 @@ class _CartScreenState extends State<CartScreen> {
           // Order Now Button
           ElevatedButton(
             onPressed: () {
-              // Navigator.of(context).push(
-              //   MaterialPageRoute(builder: (context) => const PaymentScreen()),
-              // );
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const PaymentScreen()),
+              );
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.orange, // Set the button color to orange
