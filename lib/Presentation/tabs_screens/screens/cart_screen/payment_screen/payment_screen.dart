@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:foodninja/Presentation/tabs_screens/screens/cart_screen/payment_screen/payment_screen_common_widget/row_details.dart';
 import 'package:foodninja/core/constant/extension.dart';
 import 'package:foodninja/core/constant/strings.dart';
-
 import '../../../../../core/CommonWidget/button_widget.dart';
-import 'cart_screen_common_widget/row_details.dart';
-import 'payment_widgets.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({super.key});
@@ -16,9 +14,13 @@ class PaymentScreen extends StatefulWidget {
 class _PaymentScreenState extends State<PaymentScreen> {
   @override
   Widget build(BuildContext context) {
+    final height_015 = SizedBox(height: context.height(context) * 0.04);
     return Scaffold(
       appBar: AppBar(
-        title: const Text(AppStrings.paymentScreenTitle,style: TextStyle(color: Colors.black),),
+        title: const Text(
+          AppStrings.paymentScreenTitle,
+          style: TextStyle(color: Colors.black),
+        ),
         centerTitle: true,
       ),
       body: Padding(
@@ -27,7 +29,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
           children: [
             const SizedBox(height: 10),
             const Text(
-             AppStrings.paymentScreenDeserveMeal,
+              AppStrings.paymentScreenDeserveMeal,
               style: TextStyle(fontSize: 14, color: Colors.grey),
             ),
             const SizedBox(height: 20),
@@ -35,7 +37,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
               AppStrings.paymentScreenItemOrder,
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 10),
+            height_015,
             Row(
               children: [
                 ClipRRect(
@@ -53,7 +55,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Burger With Meat',
-                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 16)),
                       Text('\$12,230', style: TextStyle(color: Colors.orange)),
                     ],
                   ),
@@ -61,48 +64,54 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 const Text('14 items', style: TextStyle(color: Colors.grey)),
               ],
             ),
-             SizedBox(height:context.height(context) * 0.015),
+            height_015,
+            Text(
+              AppStrings.paymentScreenDetailsTransaction,
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            height_015,
             ListView.separated(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(), // To prevent scrolling if nested inside other scrollable views
+              physics:
+                  NeverScrollableScrollPhysics(), // To prevent scrolling if nested inside other scrollable views
               itemCount: 4, // Number of rows
-              separatorBuilder: (context, index) => SizedBox(height:14), // Height between rows
+              separatorBuilder: (context, index) =>
+                  SizedBox(height: 14), // Height between rows
               itemBuilder: (context, index) {
                 return transactionDetails[index]; // Your row widgets in a list
               },
             ),
-            SizedBox(height:context.height(context) * 0.015),
-             Divider(endIndent: 10,),
-             SizedBox(height:context.height(context) * 0.015),
-          ListView.separated(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(), // To prevent scrolling if nested inside other scrollable views
-            itemCount: 4, // Number of rows
-            separatorBuilder: (context, index) => SizedBox(height:14), // Height between rows
-            itemBuilder: (context, index) {
-              return deliveryDetails[index]; // Your row widgets in a list
-            },
-          ),
+            height_015,
+            Divider(
+              endIndent: 10,
+            ),
+            height_015,
+            Text(
+              AppStrings.paymentScreenTotalDeliverTo,
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            height_015,
+            ListView.separated(
+              shrinkWrap: true,
+              physics:
+                  NeverScrollableScrollPhysics(), // To prevent scrolling if nested inside other scrollable views
+              itemCount: 4, // Number of rows
+              separatorBuilder: (context, index) =>
+                  SizedBox(height: 14), // Height between rows
+              itemBuilder: (context, index) {
+                return deliveryDetails[index]; // Your row widgets in a list
+              },
+            ),
 
+            height_015,
 
-            const SizedBox(height: 30),
-            ButtonWidget(buttonName: AppStrings.paymentScreenCheckout, function: (){},)
-            // ElevatedButton(
-            //   onPressed: () {},
-            //   style: ElevatedButton.styleFrom(
-            //     backgroundColor: Colors.orange,
-            //     shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadius.circular(30),
-            //     ),
-            //     padding: const EdgeInsets.symmetric(vertical: 15),
-            //   ),
-            //   child: const Text('Checkout Now', style: TextStyle(fontSize: 18,color: Colors.white)),
-            // ),
+            ButtonWidget(
+              buttonName: AppStrings.paymentScreenCheckout,
+              function: () {},
+            )
           ],
         ),
       ),
     );
   }
-
-  
 }
