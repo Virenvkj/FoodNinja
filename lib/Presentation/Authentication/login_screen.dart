@@ -75,8 +75,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            const ButtonWidget(
-              buttonName: AppStrings.signIn,
+            ButtonWidget(
+              buttonName: AppStrings.signIn, function: (){},
             ),
             SizedBox(height: context.height(context) * 0.030),
             const Row(
