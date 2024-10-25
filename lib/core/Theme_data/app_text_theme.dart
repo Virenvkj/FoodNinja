@@ -58,11 +58,11 @@ class AppTextTheme {
 
   static final titleLarge = [
     _bodyBaseTextStyle.copyWith(
-        fontSize: 16, fontWeight: FontWeight.w600), // Mobile
+        fontSize: 18, fontWeight: FontWeight.w600), // Mobile
     _bodyBaseTextStyle.copyWith(
-        fontSize: 18, fontWeight: FontWeight.w600), // Tablet
+        fontSize: 20, fontWeight: FontWeight.w600), // Tablet
     _bodyBaseTextStyle.copyWith(
-        fontSize: 20, fontWeight: FontWeight.w600), // Desktop
+        fontSize: 22, fontWeight: FontWeight.w600), // Desktop
   ];
 
   static final titleMedium = [
