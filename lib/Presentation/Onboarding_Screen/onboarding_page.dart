@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:foodninja/Domain/OnboardingModel/onboarding_model.dart';
+import 'package:foodninja/Presentation/Authentication/login_screen.dart';
 import 'package:foodninja/core/constant/extension.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import '../tabs_screens/tabs.dart';
 
 class OnboardingPage extends StatelessWidget {
   final int index;
@@ -42,21 +44,14 @@ class OnboardingPage extends StatelessWidget {
                 children: [
                   Text(
                     onboardingDetailsList[index].title,
-                    style: const TextStyle(
-                      fontSize: 38,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
+                    style: Theme.of(context).textTheme.headlineMedium,
                   ),
                   SizedBox(
                     height: context.height(context) * 0.01,
                   ),
                   Text(
                     onboardingDetailsList[index].description,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                    ),
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   SizedBox(
                     height: context.height(context) * 0.03,
@@ -75,7 +70,10 @@ class OnboardingPage extends StatelessWidget {
                   ),
                   currentPage == 2
                       ? GestureDetector(
-                          onTap: () {},
+                          onTap: () => context.push(
+                                context,
+                                target: const Tabs(),
+                              ),
                           child: CircleAvatar(
                             radius: context.height(context) * 0.04,
                             backgroundColor: Colors.white,
@@ -84,12 +82,15 @@ class OnboardingPage extends StatelessWidget {
                       : Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text(
-                              'Skip',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 18),
+                            TextButton(
+                              child: const Text('Skip',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 18)),
+                              onPressed: () => context.pushAndRemoveUntil(
+                                  context,
+                                  target: const LoginScreen()),
                             ),
                             TextButton(
                               onPressed: () {

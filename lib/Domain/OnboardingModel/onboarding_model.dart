@@ -1,3 +1,5 @@
+import '../../core/constant/strings.dart';
+
 class OnboardingModel {
   final String image;
   final String title;
@@ -10,21 +12,21 @@ class OnboardingModel {
 List<OnboardingModel> onboardingDetailsList=[
   OnboardingModel(
     image: 'assets/OnboardingImage/onboardingImage1.png',
-    title: '   We server \nincomparable \n   delicacies',
+    title: AppStrings.introScreenTitle1,
     description:
     'All the best restaurants with their top menu waiting for you, they cant’t wait for your order!!',
 
   ),
   OnboardingModel(
     image: 'assets/OnboardingImage/onboardingImage2.png',
-    title: '   Find the \n     Best \nRestaurants',
+    title:AppStrings.introScreenTitle2,
     description:
     'All the best restaurants with their top menu waiting for you, they cant’t wait for your order!!',
 
   ),
   OnboardingModel(
     image: 'assets/OnboardingImage/onboardingImage3.png',
-    title: ' They can\'t \n   wait for \nyour order!!',
+    title: AppStrings.introScreenTitle3,
     description:
     'All the best restaurants with their top menu waiting for you, they cant’t wait for your order!!',
   ),
