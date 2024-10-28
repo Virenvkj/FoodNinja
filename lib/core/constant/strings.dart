@@ -42,7 +42,10 @@ class AppStrings{
   static const facebookIcon = 'assets/AuthImages/facebook.svg';
   static const appleIcon = 'assets/AuthImages/apple.svg';
 
-  //Search Screen
+  //Appbar title
   static const searchFood = 'Search Food';
+  static const myCart = 'My Cart';
+  static const promoCode = 'Promo Code';
+  static const apply = 'Apply';
 
 }

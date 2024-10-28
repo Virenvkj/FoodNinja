@@ -8,27 +8,27 @@ class CustomBackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: ()=>context.pop(context),
-      child: Container(
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              spreadRadius: 0,
-              blurRadius: 4,
-              color: ThemeColor.black.withOpacity(0.25),
+      return GestureDetector(
+        onTap: ()=>context.pop(context),
+        child: Container(
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                spreadRadius: 0,
+                blurRadius: 4,
+                color: ThemeColor.black.withOpacity(0.25),
+              ),
+            ],
+            color: ThemeColor.transparent,
+            shape: BoxShape.circle,
+            border: Border.all(
+              width: 1,
+              color: ThemeColor.neutral30,
             ),
-          ],
-          color: ThemeColor.transparent,
-          shape: BoxShape.circle,
-          border: Border.all(
-            width: 1,
-            color: ThemeColor.neutral30,
           ),
+          child:
+            Iconses.back,
         ),
-        child:
-          Iconses.back,
-      ),
-    );
+      );
   }
 }

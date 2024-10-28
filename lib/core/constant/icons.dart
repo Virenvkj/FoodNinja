@@ -21,5 +21,7 @@ class Iconses{
   static Icon attachment = const Icon(CupertinoIcons.pin_fill);
   static Icon location = const Icon(Icons.place_outlined);
   static Icon clock = const Icon(CupertinoIcons.clock_fill);
+  static Icon menu = const Icon(Icons.menu);
+  static Icon percent = const Icon(Icons.percent);
 
 }

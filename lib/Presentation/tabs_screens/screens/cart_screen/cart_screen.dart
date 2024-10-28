@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:foodninja/Presentation/tabs_screens/screens/cart_screen/cart_item.dart';
 import 'package:foodninja/Presentation/tabs_screens/screens/cart_screen/cart_summary_row.dart';
+import 'package:foodninja/core/CommonWidget/button_widget.dart';
+import 'package:foodninja/core/CommonWidget/common_app_bar.dart';
+import 'package:foodninja/core/CommonWidget/textformfield_widget.dart';
+import 'package:foodninja/core/constant/icons.dart';
+import 'package:foodninja/core/constant/strings.dart';
 import 'payment_screen/payment_screen.dart';
 
 class CartScreen extends StatefulWidget {
@@ -11,6 +16,8 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
+  final promoCodeController = TextEditingController();
+
   // Sample cart items
   final List<Map<String, String>> cartItems = [
     {
@@ -33,15 +40,7 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('My Cart'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.more_vert),
-            onPressed: () {},
-          ),
-        ],
-      ),
+      appBar: CommonAppBar(title: AppStrings.myCart, actionIcon: Iconses.menu),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
@@ -49,12 +48,16 @@ class _CartScreenState extends State<CartScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Column(
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Delivery Location',
-                      style: TextStyle(color: Colors.grey)),
-                  Text('Home', style: TextStyle(fontWeight: FontWeight.bold)),
+                      style: Theme.of(context).textTheme.bodyMedium),
+                  Text('Home',
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyMedium
+                          ?.copyWith(fontWeight: FontWeight.w700)),
                 ],
               ),
               TextButton(
@@ -66,24 +69,10 @@ class _CartScreenState extends State<CartScreen> {
           const SizedBox(height: 10),
 
           // Promo Code Section
-          Row(
-            children: [
-              const Expanded(
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Promo Code...',
-                    prefixIcon: Icon(Icons.discount_outlined),
-                    border: OutlineInputBorder(),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 8),
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text('Apply'),
-              ),
-            ],
-          ),
+          TextformfieldWidget(
+              priFixIcon: Iconses.percent,
+              controller: promoCodeController,
+              hint: AppStrings.promoCode),
           const SizedBox(height: 20),
 
           // Cart Items Section
@@ -131,24 +120,9 @@ class _CartScreenState extends State<CartScreen> {
           const SizedBox(height: 20),
 
           // Order Now Button
-          ElevatedButton(
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const PaymentScreen()),
-              );
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.orange, // Set the button color to orange
-              padding: const EdgeInsets.symmetric(vertical: 16),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
-            ),
-            child: const Text(
-              'Order Now',
-              style: TextStyle(
-                  fontSize: 18, color: Colors.white), // Text color white
-            ),
+          const ButtonWidget(
+            navigatorScreenName: PaymentScreen(),
+            buttonName: 'Order Now',
           ),
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodninja/Presentation/tabs_screens/screens/cart_screen/payment_screen/payment_screen.dart';
 import 'package:foodninja/core/CommonWidget/button_widget.dart';
 import 'package:foodninja/core/constant/extension.dart';
 import 'package:foodninja/core/constant/theme_color.dart';
@@ -7,20 +8,17 @@ class LanguageSelector extends StatefulWidget {
   final String selectedLanguage;
   final Function(String) onLanguageSelected;
 
-   LanguageSelector({
+  const LanguageSelector({
     super.key,
     required this.selectedLanguage,
     required this.onLanguageSelected,
   });
-
-
 
   @override
   State<LanguageSelector> createState() => _LanguageSelectorState();
 }
 
 class _LanguageSelectorState extends State<LanguageSelector> {
-
   late String currentSelectedLanguage;
 
   @override
@@ -50,7 +48,8 @@ class _LanguageSelectorState extends State<LanguageSelector> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.all(context.height(context) * 0.02).copyWith(top: 00),
+              padding: EdgeInsets.all(context.height(context) * 0.02)
+                  .copyWith(top: 00),
               child: Center(
                 child: Container(
                   height: context.height(context) * 0.006,
@@ -77,24 +76,29 @@ class _LanguageSelectorState extends State<LanguageSelector> {
                   widget.onLanguageSelected(currentSelectedLanguage);
                 },
                 child: Padding(
-                  padding:  EdgeInsets.all(context.height(context)*0.013),
+                  padding: EdgeInsets.all(context.height(context) * 0.013),
                   child: Container(
-                    height: context.height(context)*0.065,
+                    height: context.height(context) * 0.065,
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: isSelected ? ThemeColor.mainColor : ThemeColor.neutral30,
+                        color: isSelected
+                            ? ThemeColor.mainColor
+                            : ThemeColor.neutral30,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Padding(
-                      padding:  EdgeInsets.all(context.height(context)*0.010),
+                      padding: EdgeInsets.all(context.height(context) * 0.010),
                       child: Row(
                         children: [
                           CircleAvatar(
-                              radius: context.height(context)*0.030,
+                              radius: context.height(context) * 0.030,
                               backgroundColor: ThemeColor.flagBgColor,
-                              child: Text(language['flag']!,style: Theme.of(context).textTheme.headlineSmall)),
+                              child: Text(language['flag']!,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headlineSmall)),
                           Expanded(
                             child: Text(
                               language['name']!,
@@ -102,7 +106,8 @@ class _LanguageSelectorState extends State<LanguageSelector> {
                             ),
                           ),
                           if (isSelected)
-                            Icon(Icons.check_circle, color:ThemeColor.mainColor),
+                            Icon(Icons.check_circle,
+                                color: ThemeColor.mainColor),
                         ],
                       ),
                     ),
@@ -110,8 +115,13 @@ class _LanguageSelectorState extends State<LanguageSelector> {
                 ),
               );
             }),
-            SizedBox(height: context.height(context)*0.010,),
-            const ButtonWidget(buttonName: 'Select'),
+            SizedBox(
+              height: context.height(context) * 0.010,
+            ),
+            const ButtonWidget(
+              buttonName: 'Select',
+              navigatorScreenName: PaymentScreen(),
+            ),
           ],
         ),
       ),

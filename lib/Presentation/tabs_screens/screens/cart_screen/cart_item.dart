@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:foodninja/core/CommonWidget/button_widget.dart';
+import 'package:foodninja/core/constant/extension.dart';
+import 'package:foodninja/core/constant/theme_color.dart';
 
 class CartItem extends StatelessWidget {
   const CartItem({
@@ -21,23 +24,27 @@ class CartItem extends StatelessWidget {
         child: Row(
           children: [
             Checkbox(value: true, onChanged: (val) {}),
-            Image.asset(imageUrl, width: 60, height: 60),
+            Image.asset(imageUrl,
+                width: context.width(context) * 0.14,
+                height: context.height(context) * 0.08),
             const SizedBox(width: 10),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title,
-                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                  Text(title, style: Theme.of(context).textTheme.titleLarge),
                   Text('\$$price',
-                      style: const TextStyle(color: Colors.orange)),
+                      style: Theme.of(context)
+                          .textTheme
+                          .titleLarge
+                          ?.copyWith(fontWeight: FontWeight.w700,color: ThemeColor.mainColor)),
                 ],
               ),
             ),
             Row(
               children: [
                 IconButton(icon: const Icon(Icons.remove), onPressed: () {}),
-                const Text('1'),
+                 Text('1',style: Theme.of(context).textTheme.bodyMedium),
                 IconButton(icon: const Icon(Icons.add), onPressed: () {}),
               ],
             ),
