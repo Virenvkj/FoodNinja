@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:foodninja/core/constant/extension.dart';
+import 'package:foodninja/core/constant/icons.dart';
 import 'package:foodninja/core/constant/theme_color.dart';
 
 class CustomBackButton extends StatelessWidget {
@@ -6,26 +8,26 @@ class CustomBackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            spreadRadius: 0,
-            blurRadius: 4,
-            color: ThemeColor.black.withOpacity(0.25),
+    return GestureDetector(
+      onTap: ()=>context.pop(context),
+      child: Container(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              spreadRadius: 0,
+              blurRadius: 4,
+              color: ThemeColor.black.withOpacity(0.25),
+            ),
+          ],
+          color: ThemeColor.transparent,
+          shape: BoxShape.circle,
+          border: Border.all(
+            width: 1,
+            color: ThemeColor.neutral30,
           ),
-        ],
-        color: ThemeColor.transparent,
-        shape: BoxShape.circle,
-        border: Border.all(
-          width: 1,
-          color: ThemeColor.neutral30,
         ),
-      ),
-      child: Icon(
-        Icons.chevron_left,
-        color: ThemeColor.neutral100,
-        size: 20,
+        child:
+          Iconses.back,
       ),
     );
   }

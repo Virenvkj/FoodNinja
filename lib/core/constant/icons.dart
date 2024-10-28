@@ -16,7 +16,7 @@ class Iconses{
   static Icon information = const Icon(CupertinoIcons.info);
   static Icon phone = const Icon(CupertinoIcons.phone);
   static Icon message = const Icon(Icons.message_outlined);
-  static Icon search = const Icon(CupertinoIcons.search);
+  static Icon search = const Icon(Icons.search,);
   static Icon clear = const Icon(CupertinoIcons.clear);
   static Icon attachment = const Icon(CupertinoIcons.pin_fill);
   static Icon location = const Icon(Icons.place_outlined);

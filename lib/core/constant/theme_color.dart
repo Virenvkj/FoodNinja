@@ -12,6 +12,8 @@ class ThemeColor {
   static Color white = const Color(0xffFFFFFF);
   static Color transparent = const Color(0x00000000);
   static Color neutral30 = const Color(0xffEDEDED);
+  static Color neutral60 = const Color(0xff878787);
+  static Color flagBgColor = const Color(0xffF3F6FB);
   static Color black = const Color(0x00ffffff);
   static Color neutral100 = const Color(0xff0f0f0f);
 }

@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         final currentPointEnum =
             BreakpointEnum.breakpointEnum(currentBreakpoint);
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Food Ninja',
           theme: BreakpointEnum.responsiveTheme(currentPointEnum),
           home: const OnboardingScreen(),

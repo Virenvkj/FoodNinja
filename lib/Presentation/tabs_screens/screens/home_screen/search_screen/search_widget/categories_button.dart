@@ -1,26 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:foodninja/core/constant/extension.dart';
+import 'package:foodninja/core/constant/theme_color.dart';
 
-class CategoriesBotton extends StatelessWidget {
-  const CategoriesBotton({super.key});
+class CategoriesButton extends StatelessWidget {
+  const CategoriesButton(
+      {super.key, required this.label, required this.iconImage});
 
   final String label;
-  final Ico
+  final String iconImage;
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
-      children: [
-        Container(
-          padding: const EdgeInsets.all(12),
-          decoration: BoxDecoration(
-            color: Colors.orange.shade100,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Icon(icon, color: Colors.orange, size: 28),
+    return Padding(
+      padding:  EdgeInsets.all(context.height(context)*0.008).copyWith(right: context.width(context)*0.045),
+      child: Container(
+        height: context.height(context) * 0.68,
+        width: context.width(context) * 0.16,
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: ThemeColor.neutral30,
+          borderRadius: BorderRadius.circular(8),
         ),
-        const SizedBox(height: 8),
-        Text(label),
-      ],
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            SizedBox(
+                height:context.height(context)*0.035,
+        child: Image.asset(iconImage,fit: BoxFit.fitHeight,)),
+            Text(label,style: Theme.of(context).textTheme.bodyMedium,),
+          ],
+        ),
+      ),
     );
   }
 }

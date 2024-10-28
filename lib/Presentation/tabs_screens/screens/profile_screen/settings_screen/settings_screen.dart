@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'settings_widgets.dart';
+import 'package:foodninja/Presentation/tabs_screens/screens/profile_screen/settings_screen/language_selector.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -23,7 +23,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             setState(() {
               selectedLanguage = language;
             });
-            Navigator.pop(context); 
+            Navigator.pop(context);
           },
         );
       },
@@ -78,21 +78,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
             title: const Text('About Ticketis'),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
-             
+
             },
           ),
           ListTile(
             title: const Text('Privacy Policy'),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
-              
+
             },
           ),
           ListTile(
             title: const Text('Terms and Conditions'),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
-              
+
             },
           ),
         ],
