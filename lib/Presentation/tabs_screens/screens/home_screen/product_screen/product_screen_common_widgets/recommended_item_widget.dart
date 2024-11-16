@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:foodninja/core/CommonWidget/button_widget.dart';
+import 'package:foodninja/core/constant/extension.dart';
 
 class RecommendedItemWidget extends StatelessWidget {
   final String imagePath;
@@ -9,7 +11,7 @@ class RecommendedItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(right: 16.0),
-      width: 100.0,
+      width: context.width(context) * 0.25,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(imagePath),

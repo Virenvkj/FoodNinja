@@ -18,11 +18,11 @@ class ProductsWidgets extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  AddRemoveButton(icon: Icons.remove, function: (){},),
+                  AddRemoveButton(icon: Icons.remove, onPressed: (){},),
                  width03,
                  const  Text("4"),
                   width03,
-                  AddRemoveButton(icon: Icons.add, function: (){},),
+                  AddRemoveButton(icon: Icons.add, onPressed: (){},),
                   width03,
                 ],
               ),

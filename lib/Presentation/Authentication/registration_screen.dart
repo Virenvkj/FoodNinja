@@ -93,7 +93,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
             ),
              ButtonWidget(
-              buttonName: AppStrings.register, function: (){},
+              buttonName: AppStrings.register, onPressed: (){},
             ),
             SizedBox(height: context.height(context) * 0.030),
             const Row(

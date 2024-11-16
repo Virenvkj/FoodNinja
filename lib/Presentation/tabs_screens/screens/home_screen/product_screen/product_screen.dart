@@ -61,8 +61,6 @@ class _ProductScreenState extends State<ProductScreen> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  // height: 295,
-          
                   height: context.height(context) * 0.35,
                   width: double.infinity,
                   decoration: BoxDecoration(

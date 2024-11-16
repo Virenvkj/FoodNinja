@@ -86,18 +86,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
 
             const SizedBox(height: 30),
-            ButtonWidget(buttonName: AppStrings.paymentScreenCheckout, function: (){},)
-            // ElevatedButton(
-            //   onPressed: () {},
-            //   style: ElevatedButton.styleFrom(
-            //     backgroundColor: Colors.orange,
-            //     shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadius.circular(30),
-            //     ),
-            //     padding: const EdgeInsets.symmetric(vertical: 15),
-            //   ),
-            //   child: const Text('Checkout Now', style: TextStyle(fontSize: 18,color: Colors.white)),
-            // ),
+            ButtonWidget(buttonName: AppStrings.paymentScreenCheckout, onPressed: (){},)
+
           ],
         ),
       ),

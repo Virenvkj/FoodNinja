@@ -3,10 +3,10 @@ import 'package:foodninja/core/constant/extension.dart';
 import 'package:foodninja/core/constant/theme_color.dart';
 
 class ButtonWidget extends StatelessWidget {
-  const ButtonWidget({super.key, required this.buttonName, required this.function});
+  const ButtonWidget({super.key, required this.buttonName, required this.onPressed});
 
   final String buttonName;
-  final Function function;
+  final Function onPressed;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

@@ -11,8 +11,8 @@ class RowDetails extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(label, style: const TextStyle(fontSize: 16, color: Colors.grey)),
-        Text(value, style: const TextStyle(fontSize: 16,fontWeight: FontWeight.w600)),
+        Text(label, style: Theme.of(context).textTheme.titleLarge),
+        Text(value, style: Theme.of(context).textTheme.bodyLarge),
       ],
     );
   }

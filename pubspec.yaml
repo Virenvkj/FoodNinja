@@ -39,6 +39,9 @@ dependencies:
   smooth_page_indicator:
   flutter_svg:
   responsive_framework:
+  razorpay_flutter:
+  flutter_bloc:
+
 
 dev_dependencies:
   flutter_test:

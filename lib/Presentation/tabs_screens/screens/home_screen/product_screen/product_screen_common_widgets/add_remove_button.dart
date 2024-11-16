@@ -6,14 +6,14 @@ import '../../../../../../core/constant/theme_color.dart';
 
 class AddRemoveButton extends StatelessWidget {
   final IconData icon;
-  final Function function;
-  const AddRemoveButton({super.key, required this.icon, required this.function});
+  final Function onPressed;
+  const AddRemoveButton({super.key, required this.icon, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        function;
+        onPressed;
       },
       child: Container(
         height: context.height(context) * 0.1 ,
