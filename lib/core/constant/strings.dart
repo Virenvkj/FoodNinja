@@ -38,4 +38,34 @@ class AppStrings{
   static const facebookIcon = 'assets/AuthImages/facebook.svg';
   static const appleIcon = 'assets/AuthImages/apple.svg';
 
+  // Product Detail Screen
+
+  static const productDetailScreenTitle = "About This Menu";
+  static const productDetailScreenDescription = "Description";
+   static const productDetailScreenRecommend = "Recommended For You";
+   static const productDetailScreenSeeAll= "See All";
+   static const productDetailScreenAddToCart =  "Add to Cart";
+
+   // PaymentScreen
+  static const paymentScreenTitle =  "Payment";
+  static const paymentScreenCheckout =  "Checkout Now";
+  static const paymentScreenDeserveMeal =  "You deserve better meal";
+  static const paymentScreenItemOrder =  "Item Ordered";
+  static const paymentScreenCherry =  "Cherry Healthy";
+  static const paymentScreenDriver =  "Driver";
+  static const paymentScreenTax =  "Tax";
+  static const paymentScreenTotalPrice =  "Total Price";
+  static const paymentScreenTotalDeliverTo =  "Deliver to";
+  static const paymentScreenTotalName =  "Name";
+  static const paymentScreenTotalAddress =  "Address";
+  static const paymentScreenTotalHouseNo =  "House No.";
+  static const paymentScreenTotalCity =  "City";
+  static const paymentScreenTotalPhoneNo =  "Phone No.";
+  static const paymentScreenDetailsTransaction =  "Details Transaction";
+
+
+
+
+
+
 }
