@@ -69,6 +69,7 @@ flutter:
      - assets/chat_screen/
      - assets/profile_screen/
      - assets/AuthImages/
+     - assets/search_screen_image/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
