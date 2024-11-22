@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foodninja/Presentation/Authentication/login_screen.dart';
-import 'package:foodninja/Presentation/Authentication/registration_screen.dart';
 import 'package:foodninja/Presentation/Onboarding_Screen/onboarding_screen.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'Presentation/Forgotpassword/forgot_password_screen.dart';
 import 'core/Theme_data/breakpoint_enum.dart';
 
 void main() {
@@ -21,9 +18,10 @@ class MyApp extends StatelessWidget {
         final currentPointEnum =
             BreakpointEnum.breakpointEnum(currentBreakpoint);
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Food Ninja',
           theme: BreakpointEnum.responsiveTheme(currentPointEnum),
-          home: const ForgotPasswordScreen(),
+          home: const OnboardingScreen(),
         );
       }),
       breakpoints: [

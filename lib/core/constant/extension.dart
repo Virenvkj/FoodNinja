@@ -12,6 +12,10 @@ extension BuildContextExtension on BuildContext {
     ));
   }
 
+  Future<void> pop(BuildContext context) async {
+    Navigator.of(context).pop();
+  }
+
   Future<void> pushAndRemoveUntil(BuildContext context,
       {required Widget target}) async {
     Navigator.of(context).pushAndRemoveUntil(
