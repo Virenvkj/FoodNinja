@@ -78,21 +78,18 @@ class _SettingsScreenState extends State<SettingsScreen> {
             title: const Text('About Ticketis'),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
-
             },
           ),
           ListTile(
             title: const Text('Privacy Policy'),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
-
             },
           ),
           ListTile(
             title: const Text('Terms and Conditions'),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
-
             },
           ),
         ],

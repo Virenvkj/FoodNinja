@@ -42,6 +42,36 @@ class AppStrings{
   static const facebookIcon = 'assets/AuthImages/facebook.svg';
   static const appleIcon = 'assets/AuthImages/apple.svg';
 
+  //Forgot password Screen
+  static const ForgotpasswordScreenTitle = 'Forgot password?';
+  static const ForgotpasswordScreenSubTitle = 'Enter your email address and we’ll send you confirmation code to reset your password';
+  static const ForgotpasswordScreenEmail = 'Email Address';
+  static const ForgotpasswordScreenContinueButtorn = 'Continue';
+
+  //OTP Screen
+
+  static const OtpScreenTitle = 'Email verification';
+  static const OtpScreenSubTitle = 'Enter the verification code we send you on:Alberts******@gmail.com|';
+  static const OtpContinueButtorn = 'Continue';
+  static const dontreceivecode = 'Didn’t receive code? ';
+  static const Resend = 'Resend';
+  static const OtpScreenContinueButtorn = 'Continue';
+
+  //Reset Password
+
+  static const ResetPasswordScreenTitle = 'Reset Password';
+  static const ResetPasswordScreenSubTitle = 'Your new password must be different from the previously used password';
+  static const NewPassword = 'New Password';
+  static const ConfirmPassword = 'Confirm Password';
+  static const NewPasswordSubTitle = 'Must be at least 8 character';
+  static const ConfirmPasswordSubTitle = 'Both password must match';
+  static const VerifyAccount = 'Verify Account';
+
+  //Bottom Sheet
+
+  static const BottomSheetTitle = 'Reset Password';
+  static const BottomSheetSubTitle = 'Your new password must be different from the previously used password';
+  static const BottomSheetVerifyAccount = 'Verify Account';
   //Search Screen
   static const searchFood = 'Search Food';
 

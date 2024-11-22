@@ -39,6 +39,7 @@ dependencies:
   smooth_page_indicator:
   flutter_svg:
   responsive_framework:
+  flutter_otp_text_field:
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +70,7 @@ flutter:
      - assets/chat_screen/
      - assets/profile_screen/
      - assets/AuthImages/
+     - assets/Success.png
      - assets/search_screen_image/
 
 
