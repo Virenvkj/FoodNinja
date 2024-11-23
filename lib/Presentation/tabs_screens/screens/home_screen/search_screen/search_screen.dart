@@ -6,8 +6,10 @@ import 'package:foodninja/Presentation/tabs_screens/screens/home_screen/search_s
 import 'package:foodninja/core/CommonWidget/common_app_bar.dart';
 import 'package:foodninja/core/CommonWidget/textformfield_widget.dart';
 import 'package:foodninja/core/constant/extension.dart';
-import 'package:foodninja/core/constant/icons.dart';
+import 'package:foodninja/core/constant/app_icons.dart';
 import 'package:foodninja/core/constant/strings.dart';
+
+import '../../../../../core/constant/assets_image.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -26,11 +28,11 @@ class _SearchScreenState extends State<SearchScreen> {
     'Pastry'
   ];
 
-  final List<CategoriesModel> categoriesList = [
-    CategoriesModel(name: 'Burger', iconImage: AppStrings.burgerIcon),
-    CategoriesModel(name: 'Taco', iconImage: AppStrings.tacoIcon),
-    CategoriesModel(name: 'Drink', iconImage: AppStrings.drinkIcon),
-    CategoriesModel(name: 'Pizza', iconImage: AppStrings.pizzaIcon),
+  final List<CategoriesModel> categoriesList = const [
+    CategoriesModel(name: 'Burger', iconImage: AssetsImage.burgerIcon),
+    CategoriesModel(name: 'Taco', iconImage: AssetsImage.tacoIcon),
+    CategoriesModel(name: 'Drink', iconImage: AssetsImage.drinkIcon),
+    CategoriesModel(name: 'Pizza', iconImage: AssetsImage.pizzaIcon),
   ];
 
   @override
@@ -49,7 +51,7 @@ class _SearchScreenState extends State<SearchScreen> {
             TextformfieldWidget(
               controller: searchController,
               hint: AppStrings.searchFood,
-              priFixIcon: Iconses.search,
+              priFixIcon: AppIcons.search,
             ),
             const SizedBox(height: 16),
 
