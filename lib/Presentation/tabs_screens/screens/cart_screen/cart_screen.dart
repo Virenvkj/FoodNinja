@@ -4,7 +4,7 @@ import 'package:foodninja/Presentation/tabs_screens/screens/cart_screen/cart_sum
 import 'package:foodninja/core/CommonWidget/button_widget.dart';
 import 'package:foodninja/core/CommonWidget/common_app_bar.dart';
 import 'package:foodninja/core/CommonWidget/textformfield_widget.dart';
-import 'package:foodninja/core/constant/icons.dart';
+import 'package:foodninja/core/constant/app_icons.dart';
 import 'package:foodninja/core/constant/strings.dart';
 import 'payment_screen/payment_screen.dart';
 
@@ -40,7 +40,7 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonAppBar(title: AppStrings.myCart, actionIcon: Iconses.menu),
+      appBar: CommonAppBar(title: AppStrings.myCart, actionIcon: AppIcons.menu),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
@@ -70,7 +70,7 @@ class _CartScreenState extends State<CartScreen> {
 
           // Promo Code Section
           TextformfieldWidget(
-              priFixIcon: Iconses.percent,
+              priFixIcon: AppIcons.percent,
               controller: promoCodeController,
               hint: AppStrings.promoCode),
           const SizedBox(height: 20),

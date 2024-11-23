@@ -1,8 +1,13 @@
-class CategoriesModel {
-  final String name;
-  final String iconImage;
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:flutter/foundation.dart';
+part 'categories_model.freezed.dart';
 
-  CategoriesModel({required this.name, required this.iconImage});
+@freezed
+class CategoriesModel with _$CategoriesModel {
+  const factory CategoriesModel({
+    required String name,
+    required String iconImage,
+  }) = _CategoriesModel;
 }
 
 

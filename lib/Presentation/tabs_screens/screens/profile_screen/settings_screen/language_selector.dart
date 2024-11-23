@@ -4,6 +4,8 @@ import 'package:foodninja/core/CommonWidget/button_widget.dart';
 import 'package:foodninja/core/constant/extension.dart';
 import 'package:foodninja/core/constant/theme_color.dart';
 
+import '../../../../../core/constant/language.dart';
+
 class LanguageSelector extends StatefulWidget {
   final String selectedLanguage;
   final Function(String) onLanguageSelected;
@@ -29,17 +31,11 @@ class _LanguageSelectorState extends State<LanguageSelector> {
 
   @override
   Widget build(BuildContext context) {
-    final List<Map<String, String>> languages = [
-      {'name': 'Indonesia', 'flag': '🇮🇩'},
-      {'name': 'English (US)', 'flag': '🇺🇸'},
-      {'name': 'Thailand', 'flag': '🇹🇭'},
-      {'name': 'Chinese', 'flag': '🇨🇳'},
-    ];
 
     return Container(
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      decoration:  BoxDecoration(
+        color: ThemeColor.white,
+        borderRadius:const  BorderRadius.vertical(top: Radius.circular(20)),
       ),
       child: Padding(
         padding: EdgeInsets.all(context.height(context) * 0.02),

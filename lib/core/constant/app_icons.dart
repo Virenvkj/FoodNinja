@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Iconses{
+class AppIcons{
   static Icon home = const Icon(CupertinoIcons.house_fill);
   static Icon cart = const Icon(CupertinoIcons.cart_fill);
   static Icon chat = const Icon(CupertinoIcons.chat_bubble_2_fill);

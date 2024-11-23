@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodninja/core/constant/extension.dart';
-import 'package:foodninja/core/constant/icons.dart';
+import 'package:foodninja/core/constant/app_icons.dart';
 import 'package:foodninja/core/constant/theme_color.dart';
 
 class CustomBackButton extends StatelessWidget {
@@ -27,7 +27,7 @@ class CustomBackButton extends StatelessWidget {
             ),
           ),
           child:
-            Iconses.back,
+            AppIcons.back,
         ),
       );
   }
