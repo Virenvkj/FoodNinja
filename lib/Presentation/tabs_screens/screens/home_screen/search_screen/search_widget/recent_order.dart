@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:foodninja/core/CommonWidget/button_widget.dart';
+import 'package:foodninja/core/constant/extension.dart';
 
 class RecentOrder extends StatelessWidget {
   const RecentOrder(
@@ -18,8 +20,8 @@ class RecentOrder extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            width: 70,
-            height: 70,
+            width: context.width(context) *0.07,
+            height: context.height(context) *0.07,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               image: const DecorationImage(

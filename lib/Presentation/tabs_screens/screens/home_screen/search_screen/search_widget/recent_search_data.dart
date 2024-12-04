@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodninja/core/constant/theme_color.dart';
 
 class RecentSearchData extends StatelessWidget {
   const RecentSearchData({super.key, required this.recentSearch});
@@ -11,10 +12,10 @@ class RecentSearchData extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 4.0),
       child: Row(
         children: [
-          const Icon(Icons.search, color: Colors.grey),
+           Icon(Icons.search, color: ThemeColor.grey),
           const SizedBox(width: 8),
           Expanded(child: Text(recentSearch,style: Theme.of(context).textTheme.bodyLarge,)),
-          const Icon(Icons.close, color: Colors.grey),
+           Icon(Icons.close, color: ThemeColor.grey),
         ],
       ),
     );
