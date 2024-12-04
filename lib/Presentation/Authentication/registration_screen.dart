@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodninja/Presentation/Authentication/common/common_list_view_bulider_widget.dart';
 import 'package:foodninja/Presentation/Authentication/login_screen.dart';
+import 'package:foodninja/Presentation/tabs_screens/screens/home_screen/home_screen.dart';
 import 'package:foodninja/core/CommonWidget/button_widget.dart';
 import 'package:foodninja/core/CommonWidget/textformfield_widget.dart';
 import 'package:foodninja/core/constant/extension.dart';
@@ -92,8 +93,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 ],
               ),
             ),
-            const ButtonWidget(
-              buttonName: AppStrings.register,
+             const ButtonWidget(
+              buttonName: AppStrings.register, navigatorScreenName: HomeScreen(),
             ),
             SizedBox(height: context.height(context) * 0.030),
             const Row(
